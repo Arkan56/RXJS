@@ -1,4 +1,5 @@
 import { Reactions } from "./Reactions";
+import { Comment } from "./Comment";
 
 export interface Post {
     id: number;
@@ -8,5 +9,5 @@ export interface Post {
     views: number;
     userid: number;
     reactions: Reactions;
-    C
+    comments: Comment[];
 }
