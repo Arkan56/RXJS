@@ -1,0 +1,7 @@
+<div *ngIf="comments.length > 0">
+    <h4>Comentarios:</h4>
+    <div *ngFor="let comment of comments">
+      <p><strong>{{ comment.user.username }}:</strong> {{ comment.body }}</p>
+    </div>
+  </div>
+  
