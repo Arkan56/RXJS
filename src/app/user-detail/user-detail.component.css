@@ -1,0 +1,20 @@
+h2{
+    color: black;
+    font-weight: bolder;
+}
+
+
+strong {
+    color: black;
+}
+p{
+    color:black;
+}
+
+div{
+    border: 1px solid rgb(94, 94, 94);
+    padding: 10px;
+    margin: 10px;
+    background-color: #bbbbbb;  
+    border-radius: 12px;
+}

@@ -1,0 +1,53 @@
+#container{
+    border: 1px solid rgb(94, 94, 94);
+    padding: 10px;
+    margin: 10px;
+    background-color: #bbbbbb;  
+    border-radius: 12px;
+}
+
+
+.etiquetas {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;    
+    padding: 10px;
+    margin: 10px;
+    width: auto; /* Ocupa solo el espacio necesario */
+    height: auto; /* Ajusta la altura automáticamente */
+}
+
+
+
+svg{
+color: black;
+
+margin:20px;
+}
+
+p {
+    color: black;
+    display:flex;
+    align-items: center;
+
+}
+
+.label-container {
+    display: inline-flex;
+    
+    justify-content: right; /* Centra el contenido dentro del contenedor */
+    align-items: center;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 20px;
+    padding: 0;
+    margin-bottom: 30px;
+    margin-left: auto; /* Empuja el contenedor hacia la derecha */
+}
+
+
+ h3{
+    color: black;
+    font-weight: bolder;
+}
