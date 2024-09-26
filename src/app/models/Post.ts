@@ -8,4 +8,5 @@ export interface Post {
     views: number;
     userid: number;
     reactions: Reactions;
+    C
 }
