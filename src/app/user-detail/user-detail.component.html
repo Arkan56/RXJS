@@ -5,4 +5,8 @@
     <p><strong>Email:</strong> {{ usuario.email }}</p>
     <p><strong>Género:</strong> {{ usuario.gender }}</p>
 </div>
+
+<div *ngIf="!usuario" class="alert alert-warning mt-3">
+    Usuario no encontrado.
+  </div>
   

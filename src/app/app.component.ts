@@ -22,11 +22,11 @@ export class AppComponent {
 
   // Búsqueda de usuario
   searchUser() {
-    this.http.get<{ users: User[] }>(`${this.ROOT_URL}/users/search?q=${this.username}`)
+    this.http.get<{ users: User[] }>(`${this.ROOT_URL}/users/filter?key=username&value=${this.username}`)
       .subscribe(data => {
         if (data.users && data.users.length > 0) {
-          this.usuario = data.users[0];  // Asigna el usuario
-          this.fetchUserPosts(this.usuario.id);  // Obtiene los posts del usuario
+          this.usuario = data.users[0];
+          this.fetchUserPosts(this.usuario.id);
         } else {
           this.usuario = null;
           this.posts = [];
@@ -41,7 +41,6 @@ export class AppComponent {
         this.posts = data.posts;
         console.log('Posts del usuario:', this.posts);
 
-        // Una vez que los posts se han cargado, obtenemos los comentarios para cada post
         this.posts.forEach(post => {
           this.fetchCommentsForPost(post);
         });
@@ -52,7 +51,7 @@ export class AppComponent {
   fetchCommentsForPost(post: Post): void {
     this.http.get<{ comments: Comment[] }>(`${this.ROOT_URL}/comments/post/${post.id}`)
       .subscribe(data => {
-        post.comments = data.comments;  // Asignamos los comentarios al post
+        post.comments = data.comments;
         console.log(`Comentarios para el post ${post.id}:`, post.comments);
       });
   }
